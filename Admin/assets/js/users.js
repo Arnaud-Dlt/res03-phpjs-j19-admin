@@ -22,20 +22,20 @@ function getAllUsers()
                 let td4 = document.createElement("td");
                 let td5 = document.createElement("td");
                 let td6 = document.createElement("td");
-                let td7 = document.createElement("td");
                 
                 let showBtn=document.createElement("button");
                 let editBtn=document.createElement("button");
                 let deleteBtn=document.createElement("button");
 
-                td1.textContent = username;
-                td2.textContent = userFirstName;
-                td3.textContent = userLastName;
-                td4.textContent = userEmail;
+                td1.textContent = userId;
+                td2.textContent = username;
+                td3.textContent = userFirstName;
+                td4.textContent = userLastName;
+                td5.textContent = userEmail;
                 
-                td5.appendChild(showBtn);
-                td5.appendChild(editBtn);
-                td5.appendChild(deleteBtn);
+                td6.appendChild(showBtn);
+                td6.appendChild(editBtn);
+                td6.appendChild(deleteBtn);
                 
                 showBtn.setAttribute("user-id", userId);
                 editBtn.setAttribute("user-id", userId);
@@ -50,8 +50,16 @@ function getAllUsers()
                 tr.appendChild(td3);
                 tr.appendChild(td4);
                 tr.appendChild(td5);
+                tr.appendChild(td6);
 
                 tbody.appendChild(tr);
+                
+                showBtn.addEventListener("click", function(){
+                    window.location.href=`https://arnauddeletre.sites.3wa.io/JS/res03-phpjs-j19-admin/Admin/user.html`;
+                });
+                editBtn.addEventListener("click", function(){
+                    window.location.href=`https://arnauddeletre.sites.3wa.io/JS/res03-phpjs-j19-admin/Admin/update-user.html`;
+                });
 
             }
         });
