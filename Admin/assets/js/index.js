@@ -1,6 +1,8 @@
-import { getAll } from 'assets/js/users.js';
+import { getAllUsers } from './users.js';
+import { userById } from './user.js';
 
 
 window.addEventListener("DOMContentLoaded", function(){
-    getAll();
+    getAllUsers();
+    userById();
 })
